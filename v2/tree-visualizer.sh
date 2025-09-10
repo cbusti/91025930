@@ -32,8 +32,7 @@ print_tree() {
 
   # Iterate over contents
   local item
-#  for item in "$dir"/*; do
-    for item in "$dir"/{.,}*; do
+  for item in "$dir"/*; do
     [[ -e "$item" ]] || continue
     if [[ -d "$item" ]]; then
       print_tree "$item" "$prefix│   "
